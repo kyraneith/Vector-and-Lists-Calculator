@@ -1,3 +1,8 @@
+/*   Description:
+     This program can calculate a dotproduct, identify any duplicates in a list of numbers, 
+     and calculate the max distance between two numbers in two different lists
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -42,7 +47,7 @@ void printList(Node *ptr)
 }
 
 //;-----------------------
-//; Write the DotProduct Function Here
+//; calculates the dotproduct
 //;-----------------------
 
 int dotProduct(Node *ptr1, Node *ptr2)
@@ -62,7 +67,7 @@ int dotProduct(Node *ptr1, Node *ptr2)
      return (ptr1->data * ptr2->data) + dotProduct(ptr1->next, ptr2->next);
 }
 //;-----------------------
-//; Write the Duplicates Function Here
+//; finds duplicates in a list
 //;-----------------------
 
 bool duplicatesRecursive(Node *ptr, int *visited, int visited_count)
@@ -106,7 +111,7 @@ bool duplicates(Node *ptr)
 }
 
 //;-----------------------
-//; Write the MaxDistance Function Here
+//; calculates the max distance between two elements in a list
 //;-----------------------
 
 int singleMaxDistance(Node *ptr1, Node *ptr2)
@@ -137,9 +142,7 @@ int maxDistance(Node *ptr1, Node *ptr2, int maxSoFar = -1)
 }
 
 //;-----------------------
-//; Extra Credit
-//; Write a reverseList Function here
-//; Add your own method calls to the end of the main method.
+//; reverses the order of elements in a list
 //;-----------------------
 
 Node *reverseList(Node *ptr)
@@ -164,10 +167,7 @@ Node *reverseList(Node *ptr)
 }
 
 //;-----------------------
-//; Extra Credit
-//; Write a removeNum Function here
-//; This removes all instances of `num` in the list
-//; Add your own method calls to the end of the main method.
+//; removes all instances of "num" in the list
 //;-----------------------
 
 Node *removeNumRecursive(Node *ptr, int *visited, int visited_count)
@@ -211,7 +211,7 @@ Node *removeNum(Node *ptr, int num)
 }
 
 //;-----------------------
-//; Below are your test cases.
+//; test cases
 //;-----------------------
 
 int main()
